@@ -1,0 +1,155 @@
+* {
+    margin: px;
+    padding: px;
+    box-sizing:  border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background:  rgb(208, 178, 188);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 850px;
+    background: rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgb(0, 0, 0, 0.1);
+}
+
+.login {
+    width: 400px;
+}
+
+h1 {
+    margin: 20px;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+hr {
+    border-top: 2px solid white;
+}
+
+form{
+    width: 250px;
+    margin: 60px auto;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+}
+
+input {
+    width: 100%;
+    margin: 2px;
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 1 0 100%;
+}
+
+.input_field {
+    width: 100%;
+    padding: 12px;
+}
+
+p {
+    text-align: center;
+    align-content: flex-end;
+}
+
+.right img {
+    width: 450px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: cover;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: grey;
+}
+.submit1 {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(117, 116, 116);
+}
+.submit-google {
+    border: 1px solid grey;
+    outline: none;
+    padding: 8px;
+    width: 252px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: rgb(255, 252, 252);
+}
+
+button:hover {
+    background: rgb(203, 168, 168);
+}
+
+@media ( max-width: 880px) {
+    .container {
+        width: 100%;
+        max-width: 750px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    form {
+        width: 300px;
+        margin: 20px auto;
+    }
+    .login {
+        width: 400px;
+        padding: 20px;
+    }
+    button {
+        width: 100%;
+    }
+
+    .right img {
+        width: 100%;
+        height: 100%;
+    }
+}

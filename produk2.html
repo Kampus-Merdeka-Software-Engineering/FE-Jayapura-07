@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Vetements - Start To Buy !</title>
+        <link rel="icon" type="image/x-icon" href="assets\brand.png" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap4/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/product.css">
+        <link rel="stylesheet" type="text/css" href="css/product_responsive.css">
+</head>
+    </head>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav">
+                        <li><img class="image" src="assets\brand.png"  width="auto" height="40px" style="margin: 5px;padding: 0px color white;"></li>
+                    </ul></b>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="halamanawal.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Profile</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <form class="d-flex">
+                        <a href="keranjang.html" class="btn btn-outline-dark">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">3</span>
+                        </a>
+                    </form>                    
+                </div>
+            </div>
+        </nav>
+        	<!-- Product -->
+            <div class="product">
+            <div class="container">
+			<div class="row product_row">
+				<!-- Product Image -->
+				<div class="col-lg-6">
+					<div class="product_image">
+						<div class="product_image_large"><img src="assets/blouse.png" alt=""></div>
+						<div class="product_image_thumbnails d-flex flex-row align-items-start justify-content-start">
+							<div class="product_image_thumbnail" style="background-image:url(images/thumbnail-1.png)" data-image="images/product_image_1.jpg"></div>
+							<div class="product_image_thumbnail" style="background-image:url(images/thumbnail-2.png)" data-image="images/product_image_2.jpg"></div>
+							<div class="product_image_thumbnail" style="background-image:url(images/thumbnail-3.png)" data-image="images/product_image_4.jpg"></div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Product Content -->
+				<div class="col-lg-5">
+					<div class="product_content">
+						<div class="product_name">Blouse</div>
+                        <div class="price">
+                            <span class="original-price">Rp. 200.000</span>
+                            <span class="discount-price">Rp. 150.000</span>
+                            <span class="discount-percent">25% off</span>
+                        </div>
+						<div class="rating">
+                            <p class="rating-number">4.0</p>
+                            <div class="star-container">
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9733;</span>
+                                <span class="star">&#9734;</span>
+                            </div>
+                            <p class="rating-text">| 100 Penilaian | 500 Terjual</p>
+                        </div>
+                        <!-- Informasi pengiriman -->
+                        <div class="product-delivery">
+                        <div class="delivery-icon">
+                            <img src="assets/mobil.png" alt="Logo Mobil">
+                        </div>
+                        <div class="delivery-details">
+                            <p>Pengiriman ke <strong>Jakarta</strong></p>
+                            <p>Ongkos Kirim: <strong>Rp. 0 - Rp. 15.000</strong></p>
+                        </div>
+						<div class="product_text">
+							<p>Ini adalah hoddie bagus dan limited!.</p>
+						</div>
+                        <!-- Product color -->
+                        <div class="product-color">
+                            <span>Color</span>
+                            <select id="color-select">
+                                <option value="Abu">Grey</option>
+                                <option value="Hitam">Black</option>
+                                <option value="Coklat">Brown</option>
+                                <option value="Biru">Blue</option>
+                                <!-- Tambahkan pilihan warna lainnya sesuai kebutuhan -->
+                            </select>
+                        </div>
+						<!-- Product Quantity -->
+						<div class="product_quantity_container">
+							<span>Quantity</span>
+							<div class="product_quantity clearfix">
+								<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
+								<div class="quantity_buttons">
+									<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
+									<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+								</div>
+							</div>
+						</div>
+						<!-- Product Size -->
+						<div class="product_size_container">
+							<span>Size</span>
+							<div class="product_size">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+									<li>
+										<input type="radio" id="radio_1" name="product_radio" class="regular_radio radio_1">
+										<label for="radio_1">XS</label>
+									</li>
+									<li>
+										<input type="radio" id="radio_2" name="product_radio" class="regular_radio radio_2" checked>
+										<label for="radio_2">S</label>
+									</li>
+									<li>
+										<input type="radio" id="radio_3" name="product_radio" class="regular_radio radio_3">
+										<label for="radio_3">M</label>
+									</li>
+									<li>
+										<input type="radio" id="radio_4" name="product_radio" class="regular_radio radio_4">
+										<label for="radio_4">L</label>
+									</li>
+									<li>
+										<input type="radio" id="radio_5" name="product_radio" class="regular_radio radio_5">
+										<label for="radio_5">XL</label>
+									</li>
+								</ul>
+							</div>
+							<div class="button cart_button"><a href="#" onclick="addtoCart()">add to cart</a></div>
+                            <div class="button buynow_button"><a href="#" onclick="buynow()">buy now</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="js/product_custom.js"></script>
+</body>
+</html>
