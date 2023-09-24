@@ -1,48 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'poppins', sans-serif;
+
+.all-produk{
+    margin-left: 150px;
 }
 
-body{
-    background-color: #bfb6ac;
-    
-}
+.detail-produk{
+    margin-top: 100px;
 
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 20px;
-    background-color: #a5a3a3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.icon{
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.icon-navbar{
-    padding: 10px;
-    height: 50px;
-}
-
-.detail-product{
-  justify-content: center; /* Mengatur rata tengah secara horizontal */
-  align-items: center; /* Mengatur rata tengah secara vertikal */
-}
-
-.table{
-    margin-bottom: 30px;
-    margin-top: 32px;
-    height: auto;
 }
 
 .name-product{
@@ -67,23 +30,18 @@ td, th{
     text-align: center;
 }
 
-a {
-    color: black; /* Warna hitam */
-}
-
-a:hover {
-    color: gray; /* Warna abu-abu saat dihover */
-}
-
 .btn-box{
     width: 20px;
     height: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 .close-box{
     width: 7%;
     vertical-align: top;
+    
 }
 
 .subtotal{
@@ -108,7 +66,7 @@ a:hover {
 }
 
 .garis-pembatas{
-    width: 80%;
+    width: 73%;
 }
 
 .btn-buy{
@@ -128,12 +86,4 @@ a:hover {
     padding: 10px 20px;
     cursor: pointer;
     align-items: center;
-}
-
-.contoh-tabel{
-    z-index: 1;
-    display: flex;
-  justify-content: center; /* Mengatur rata tengah secara horizontal */
-  align-items: center; /* Mengatur rata tengah secara vertikal */
-  height: 100vh; /* Opsi: Mengisi seluruh tinggi tampilan */
 }

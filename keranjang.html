@@ -3,169 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>halaman product</title>
-    <link rel="icon" type="image/x-icon" href="assets\brand.png" />
+    <title>Cart</title>
     <link rel="stylesheet" href="css/keranjang.css">
     <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/92676d13b7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container px-4 px-lg-5">
+    
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="nav navbar-nav">
-                    <li><img class="image" src="assets\brand.png"  width="auto" height="40px" style="margin: 5px;padding: 0px color white;"></li>
-                </ul></b>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="halamanawal.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <form class="d-flex">
-                    <a href="keranjang.html" class="btn btn-outline-dark">
-                        <i class="bi-cart-fill me-1"></i>
-                        Cart
-                        <span class="badge bg-dark text-white ms-1 rounded-pill">3</span>
-                    </a>
-                </form>                
-            </div>
-        </div>
-    </nav>
-    </nav>
-
-<div class="detail-product">
-<table class="table">
-        <tr>
-            <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
-            <th rowspan="3"><img src="assets/hodie.png" class="img-product"></th>
-            <th colspan="3" height="70px" class="name-product">
-                <a href="produk1.html">
-                    <p class="product-name">hoddie</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav">
+                <li><img class="image" src="assets\brand.png"  width="auto" height="40px" style="margin: 5px;padding: 0px color white;"></li>
+            </ul></b>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                <li class="nav-item"><a class="nav-link active" aria-current="page" href="halamanawal.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">All Products</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <form class="d-flex">
+                <a href="keranjang.html" class="btn btn-outline-dark">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">3</span>
                 </a>
-            </th>            
-            <th class="subtotal">subtotal</th>
-            <th class="close-box"  rowspan="3"><a href="#"><i class="fas fa-times" class="btn-box"></i></a></th>  
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>color</td>
-            <td>quantity</td>
-            <th>Rp.80.000</th>
-        <tr class="pilihan">
-            <td height="50px">
-                <select>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select>
-            </td>
-            <td>
-                <select>
-                    <option value="putih">putih</option>
-                    <option value="hitam">hitam</option>
-                    <option value="coklat">coklat</option>
-                    <option value="hijau">hijau</option>
-                    <option value="naviy">naviy</option>
-                </select>
-            </td>
-            <td><input type="number" min="1" value="1" class="btn-jumlah"></td>
-        </tr>
-    </table>
+            </form>                
+        </div>
+    </div>
+</nav>
+
+<div class="all-produk">
+    <div class="detail-produk">
+        <table>
+            <tr>
+                <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
+                <th rowspan="3"><img src="assets/hodie.png" class="img-product"></th>
+                <th colspan="3" height="70px" class="name-product"><p class="product-name">hoodie</p></th>
+                <th class="subtotal">subtotal</th>
+                <th class="close-box"  rowspan="3"><a class="btn-box" href="#">X</a></th>
+            </tr>
+            <tr>
+                <td>size</td>
+                <td>color</td>
+                <td>quantity</td>
+             <th>Rp.80.000</th>
+            </tr>
+        
+            <tr class="pilihan">
+                <td height="50px">
+                    <select>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="putih">putih</option>
+                        <option value="hitam">hitam</option>
+                        <option value="coklat">coklat</option>
+                        <option value="hijau">hijau</option>
+                        <option value="naviy">naviy</option>
+                    </select>
+                </td>
+                <td><input type="number" min="1" value="1" class="btn-jumlah"></td>
+            </tr>
+        </table>
+    </div>
 
     <hr class="garis-pembatas">
 
-    <table class="table">
-        <tr>
-            <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
-            <th rowspan="3"><img src="assets/blouse.png" class="img-product"></th>
-            <th colspan="3" height="70px" class="name-product"><p class="product-name">blouse </p></th>
-            <th class="subtotal">subtotal</th>
-            <th class="close-box" rowspan="3"><a href="#"><i class="fas fa-times" class="btn-box"></i></a></th>
-            
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>color</td>
-            <td>quantity</td>
-            <th>Rp.80.000</th>
-        <tr class="pilihan">
-            <td height="50px">
-                <select>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select>
-            </td>
-            <td>
-                <select>
-                    <option value="putih">putih</option>
-                    <option value="hitam">hitam</option>
-                    <option value="coklat">coklat</option>
-                    <option value="hijau">hijau</option>
-                    <option value="naviy">naviy</option>
-                </select>
-            </td>
-            <td><input type="number" min="1" value="1" class="btn-jumlah"></td>
-        </tr>
-    </table>
+    <div class="detail-produk">
+        <table>
+            <tr>
+                <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
+                <th rowspan="3"><img src="assets/blouse.png" class="img-product"></th>
+                <th colspan="3" height="70px" class="name-product"><p class="product-name">blouse</p></th>
+                <th class="subtotal">subtotal</th>
+                <th class="close-box"  rowspan="3"><a class="btn-box" href="#">X</a></th>
+            </tr>
+            <tr>
+                <td>size</td>
+                <td>color</td>
+                <td>quantity</td>
+                <th>Rp.80.000</th>
+            <tr class="pilihan">
+                <td height="50px">
+                    <select>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="putih">putih</option>
+                        <option value="hitam">hitam</option>
+                        <option value="coklat">coklat</option>
+                        <option value="hijau">hijau</option>
+                        <option value="naviy">naviy</option>
+                    </select>
+                </td>
+                <td><input type="number" min="1" value="1" class="btn-jumlah"></td>
+            </tr>
+        </table>
+    </div>
 
     <hr class="garis-pembatas">
 
-    <table class="table">
-        <tr>
-            <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
-            <th rowspan="3"><img src="assets/dress.png" class="img-product"></th>
-            <th colspan="3" height="70px" class="name-product"><p class="product-name">dress </p></th>
-            <th class="subtotal">subtotal</th>
-            <th class="close-box" rowspan="3"><a href="#"><i class="fas fa-times" class="btn-box"></i></a></th>
-            
-        </tr>
-        <tr>
-            <td>size</td>
-            <td>color</td>
-            <td>quantity</td>
-            <th>Rp.80.000</th>
-        <tr class="pilihan">
-            <td height="50px">
-                <select>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                    <option value="XXL">XXL</option>
-                </select>
-            </td>
-            <td>
-                <select>
-                    <option value="putih">putih</option>
-                    <option value="hitam">hitam</option>
-                    <option value="coklat">coklat</option>
-                    <option value="hijau">hijau</option>
-                    <option value="naviy">naviy</option>
-                </select>
-            </td>
-            <td><input type="number" min="1" value="1" class="btn-jumlah"></td>
-        </tr>
-    </table>
+    <div class="detail-produk">
+        <table>
+            <tr>
+                <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
+                <th rowspan="3"><img src="assets/dress.png" class="img-product"></th>
+                <th colspan="3" height="70px" class="name-product"><p class="product-name">dress</p></th>
+                <th class="subtotal">subtotal</th>
+                <th class="close-box"  rowspan="3"><a class="btn-box" href="#">X</a></th>
+            </tr>
+            <tr>
+                <td>size</td>
+                <td>color</td>
+                <td>quantity</td>
+                <th>Rp.80.000</th>
+            </tr>
+            <tr class="pilihan">
+                <td height="50px">
+                    <select>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option value="putih">putih</option>
+                        <option value="hitam">hitam</option>
+                        <option value="coklat">coklat</option>
+                        <option value="hijau">hijau</option>
+                        <option value="naviy">naviy</option>
+                    </select>
+                </td>
+                <td><input type="number" min="1" value="1" class="btn-jumlah"></td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="garis-pembatas">
+    
 </div>
 
 <nav class="btn-buy">
@@ -205,8 +209,6 @@
         });
     </script>
 
+
 </body>
 </html>
-
-
-
