@@ -134,9 +134,9 @@
             <tr>
                 <th rowspan="3" class="close-box"><a href="#"><input type="checkbox" class="btn-box"></a></th>
                 <th rowspan="3"><img src="assets/dress.png" class="img-product"></th>
-                <th colspan="3" height="70px" class="name-product"><p class="product-name">dress</p></th>
+                <th colspan="3" height="70px" class="name-product"><span class="product-name">dress</span></th>
                 <th class="subtotal">subtotal</th>
-                <th class="close-box"  rowspan="3"><a class="btn-box" href="#">X</a></th>
+                <th class="close-box"  rowspan="3"><span class="btn-closebox">&times;</span></th>
             </tr>
             <tr>
                 <td>size</td>
@@ -172,43 +172,115 @@
     
 </div>
 
+<!-- Tambahkan ini setelah bagian terakhir dari kodingan produk Anda -->
+<div class="modal" id="custom-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h>Detail Produk</h1>
+        <div id="modal-produk-detail"></div>
+        <button id="lanjutkan">Lanjutkan</button>
+        <button id="batal">Batal</button>
+    </div>
+</div>
+
+
 <nav class="btn-buy">
     <button id="tombolCheckout" disabled>Checkout</button>
 </nav> 
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var checkboxes = document.getElementsByClassName('btn-box');
-            var tombolCheckout = document.getElementById('tombolCheckout');
+<!-- Modal -->
+<div class="modal" id="custom-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Detail Produk</h2>
+        <div id="modal-produk-detail"></div>
+        <button id="lanjutkan">Lanjutkan</button>
+        <button id="batal">Batal</button>
+    </div>
+</div>
 
-            for (var i = 0; i < checkboxes.length; i++) {
-                checkboxes[i].addEventListener('change', function() {
-                    if (apakahAdaProdukDipilih()) {
-                        tombolCheckout.disabled = false;
-                    } else {
-                        tombolCheckout.disabled = true;
-                    }
-                });
-            }
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('.btn-box');
+        const checkoutButton = document.getElementById('tombolCheckout');
+        const modal = document.getElementById('custom-modal');
+        const modalProdukDetail = document.getElementById('modal-produk-detail');
+        const lanjutkanButton = document.getElementById('lanjutkan');
+        const batalButton = document.getElementById('batal');
+        const closeModal = document.querySelector('.close');
 
-            function apakahAdaProdukDipilih() {
-                for (var i = 0; i < checkboxes.length; i++) {
-                    if (checkboxes[i].checked) {
-                        return true;
+        let selectedProducts = [];
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const checkedBoxes = document.querySelectorAll('.btn-box:checked');
+                checkoutButton.disabled = checkedBoxes.length === 0;
+
+                if (this.checked) {
+                    const productName = this.parentElement.parentElement.querySelector('.product-name').textContent;
+                    const productPrice = parseInt(this.parentElement.parentElement.querySelector('.subtotal').textContent.substr(3));
+                    const productQuantity = parseInt(this.parentElement.parentElement.querySelector('.btn-jumlah').value);
+
+                    selectedProducts.push({
+                        name: productName,
+                        price: productPrice,
+                        quantity: productQuantity
+                    });
+                } else {
+                    selectedProducts = selectedProducts.filter(product => product.name !== this.parentElement.parentElement.querySelector('.product-name').textContent);
+                    if (selectedProducts.length === 0) {
+                        checkoutButton.disabled = true;
                     }
                 }
-                return false;
-            }
-
-            document.getElementById('tombolCheckout').addEventListener('click', function() {
-                var produkDipilih = document.querySelectorAll('.produk-checkbox:checked');
-                var produkDipilihText = Array.from(produkDipilih).map(el => el.parentElement.querySelector('span').textContent);
-
-                alert('Anda memilih: ' + produkDipilihText.join(', '));
             });
         });
-    </script>
 
+        checkoutButton.addEventListener('click', function() {
+    const checkedBoxes = document.querySelectorAll('.btn-box:checked');
+
+    if (checkedBoxes.length > 0) {
+        modal.style.display = 'block';
+
+        // Tampilkan daftar produk yang dipilih di dalam modal
+        const produkDetailHTML = selectedProducts.map(function(product, index) {
+            return `
+                <div>
+                    <p>Nama Produk: ${product.name}</p>
+                    <p>Harga: Rp.${product.price}</p>
+                    <p>Jumlah: ${product.quantity}</p>
+                    <p>Total Harga: Rp.${product.price * product.quantity}</p>
+                </div>
+            `;
+        }).join('');
+
+        // Isi innerHTML dari elemen modal dengan string HTML yang berisi detail produk
+        modalProdukDetail.innerHTML = produkDetailHTML;
+    } else {
+        alert('Pilih setidaknya satu produk sebelum checkout.');
+    }
+});
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        lanjutkanButton.addEventListener('click', function() {
+            // Implementasikan logika untuk melanjutkan transaksi di sini
+            alert('pesanan sedang di proses!');
+            modal.style.display = 'none';
+            selectedProducts = [];
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            checkoutButton.disabled = true;
+        });
+
+        batalButton.addEventListener('click', function() {
+            modal.style.display = 'none';
+            selectedProducts = [];
+            checkboxes.forEach(checkbox => checkbox.checked = false);
+            checkoutButton.disabled = true;
+        });
+    });
+</script>
 
 </body>
 </html>
