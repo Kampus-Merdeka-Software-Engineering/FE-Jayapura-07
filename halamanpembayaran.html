@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Page</title>
+  <link rel="stylesheet" href="css/halamanpembayaran.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Payment Details</h1>
+    <h4>jangan lupa untuk menuliskan Nama - Nomor Telephone pada pesan</h4>
+      <div class="paymentItem">
+        <span>Due Date:</span>
+        <span>2023-10-15</span>
+      </div>
+      <div class="paymentItem">
+        <span>Whatsapp admin:</span>
+        <span id="uniqueCode">08XXXXXXX</span>
+      </div>
+    </div>
+    <button onclick="generateUniqueCode()">Generate New Code</button>
+  </div>
+
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
