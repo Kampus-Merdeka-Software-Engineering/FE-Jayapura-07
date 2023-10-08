@@ -1,0 +1,136 @@
+main{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.card{
+    background-color: rgb(246, 231, 218);
+    padding: 10px;
+}
+/* .checkout-detail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+} */
+.product-detail-list{
+    margin: 10px 0;
+    width: 45vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.product-picture{
+    width: 40%;
+}
+.product-picture>img{
+    width: 100%;
+}
+.side{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    gap: 15px;
+}
+.product-name{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.product-foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+#pilih_pengiriman, .bayar, #pilihPembayaran{
+    padding: 5px;
+    border: none;
+    color: white;
+    background-color: #937c6f;
+    border-radius: 5px;
+}
+.bayar{
+    width: 100%;
+}
+.bayar:hover{
+    background-color: #b7a397;
+}
+#pilih_pengiriman>option{
+    background-color: white;
+    color: rgb(42, 42, 42);
+}
+.quantity>span{
+    font-weight: 700;
+}
+.subtotal{
+    background-color: white;
+    padding: 3px 9px;
+    border-radius: 8px;
+}
+.subtotal>span, .harga>span{
+    font-weight: 700;
+}
+.billing-list{
+    top: 10px;
+    /* display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around; */
+    /* gap: 20px; */
+}
+.bill-head{
+    text-align: center;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+.billing-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+section.formPembelian{
+    display: none;
+}
+.formDataPembelian{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 60vw;
+}
+.inputField{
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 100%;
+}
+@media only screen and (max-width: 600px){
+    /* main{
+        flex-direction: column;
+    } */
+    .product-detail-list{
+        flex-direction: column;
+        width: 100%;
+    }
+    .product-picture{
+        width: 60%;
+    }
+    /* .formDataPembelian{
+        width: 100%;
+    } */
+}

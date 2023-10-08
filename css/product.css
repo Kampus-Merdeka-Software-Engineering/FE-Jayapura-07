@@ -1,0 +1,453 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+	3.1 Header Left
+	3.2 Header Center
+	3.3 Header Right
+5. Product
+	5.1 Current Page
+	5.2 Product Image
+	5.3 Product Content
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@font-face
+{
+	font-family: 'Lucida';
+	src: url('../fonts/lucida_bright_regular.ttf')  format('truetype');
+}
+@font-face
+{
+	font-family: 'Lucida';
+	src: url('../fonts/lucida_bright_demi.ttf')  format('truetype');
+	font-weight: 700;
+}
+@font-face
+{
+	font-family: 'Beyond';
+	src: url('../fonts/beyond_the_mountains.otf')  format('opentype'),
+		 url('../fonts/beyond_the_mountains.ttf')  format('truetype');
+}
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+*
+{
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+body
+{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	background: #BFB6AC;
+	color: #000;
+}
+div
+{
+	display: block;
+	position: relative;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+ul
+{
+	list-style: none;
+	margin-bottom: 0px;
+}
+.button
+{
+	width: 142px;
+	height: 46px;
+	background: #937c6f;
+	text-align: center;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.button a
+{
+	display: block;
+	font-size: 12px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	letter-spacing: 0.2em;
+	line-height: 46px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.button:hover
+{
+	background: #e0e3e4;
+}
+.button:hover a
+{
+	color: #232323;
+}
+
+/*********************************
+3. Header
+*********************************/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #BFB6AC;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #A5A3A3;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+/*********************************
+3.1 Header - Left
+*********************************/
+
+.header-left img {
+    max-width: 100px;
+    height: auto;
+}
+
+/*********************************
+3.2 Header - Center
+*********************************/
+.header-center form {
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-center input[type="text"] {
+    width: 300px;
+    padding: 5px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    border: 1px solid #D9D9D9;
+    overflow: hidden;
+    width: 550px;
+    height: 40px;
+}
+
+.search-box input[type="search"] {
+    flex-grow: 1;
+    background-color: #D9D9D9;
+    padding: 10px;
+    border: none;
+    outline: none;
+    width: 100%;
+}
+
+.search-box button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.search_button:focus
+{
+	outline: none !important;
+}
+.search_button img
+{
+	max-width: 100%;
+}
+
+
+/*********************************
+3.3 Header - Right
+*********************************/
+
+.header-right img {
+    max-width: 30px;
+    height: auto;
+    margin-right: 10px; /* Memberikan jarak antara gambar-gambar */
+    margin-left: -2px; /* Menggeser gambar ke kiri */
+}
+
+
+
+.header.scrolled
+{
+	height: 80px;
+}
+.header_inner
+{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*********************************
+4. Product
+*********************************/
+
+.product
+{
+	padding-top: 94px;
+	padding-bottom: 98px;
+	background: #BFB6AC;
+}
+
+
+/*********************************
+4.1 Product Image
+*********************************/
+
+.product_row
+{
+	margin-top: 5px;
+}
+
+.product_image_large
+{
+	width: 100%;
+}
+.product_image_large img
+{
+	max-width: 100%;
+}
+
+/*********************************
+4.3 Product Content
+*********************************/
+
+.product_name
+{
+	font-size: 30px;
+	font-weight: 600;
+	color: #232323;
+	line-height: 0.75;
+}
+/* Gaya harga */
+.price {
+    display: flex;
+    align-items: baseline; /* Mengatur elemen harga menjadi berdampingan */
+    font-size: 20px;
+}
+
+.original-price {
+    font-weight: bold; /* Mengatur tebal pada harga diskon */
+    color: #333; /* Warna harga diskon */
+    margin-right: 5px; /* Jarak antara harga diskon dan persentase diskon */
+}
+
+
+/* Gaya rating dan informasi lainnya */
+.product-info {
+    display: flex;
+    justify-content: flex-start; /* Menempatkan produk di sebelah kiri */
+    flex-direction: column; /* Mengatur elemen-elemen rating dan informasi lainnya menjadi tumpukan vertikal */
+}
+
+.in_stock
+{
+	display: inline-block;
+	position: relative;
+	background: #e0e3e4;
+	width: 15px;
+	height: 15px;
+}
+.in_stock.in_stock_true::after
+{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	content: url(../images/checked.png);
+}
+.in_stock_container span
+{
+	font-size: 14px;
+	color: #232323;
+	margin-left: 7px;
+}
+.product_text
+{
+	margin-top: 20px;
+}
+.product_text p:last-of-type
+{
+	margin-bottom: 0;
+}
+/* Gaya informasi warna */
+.product-color {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+}
+#color-select, #quantity_input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+	text-align: center;
+}
+.product-color span
+{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	color: #232323;
+	vertical-align: middle;
+}
+.product-color p {
+    margin-right: 10px;
+}
+
+.product_quantity_container
+{
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+}
+.product_quantity_container span
+{
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	color: #232323;
+	vertical-align: middle;
+}
+.product_quantity
+{
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 5px;
+	/* width: 122px;
+	height: 41px; */
+	/* border: solid 1px #b5b5b5; */
+	overflow: hidden;
+	/* padding-left: 11px; */
+	/* vertical-align: middle; */
+	margin-left: 14px;
+}
+.product_quantity input
+{
+	display: block;
+	width: 30px;
+	height: 41px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	font-weight: 400;
+	color: #232323;
+	text-align: left;
+	padding-left: 9px;
+	line-height: 39px;
+	float: left;
+}
+.quantity_inc, .quantity_dec{
+	display: block;
+	cursor: pointer;
+	background-color: whitesmoke;
+	padding: 5px 12px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+.quantity_inc:hover, .quantity_dec:hover{
+	background-color: bisque;
+}
+
+.product_size_container
+{
+	margin-top: 54px;
+}
+.product_size
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+.product_size_container span
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #232323;
+}
+.regular_radio
+{
+	display: none;
+}
+.regular_radio:checked + label
+{
+	background: #937c6f;
+	color: #FFFFFF;
+}
+.regular_radio + label
+{
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	width: 48px;
+	height: 41px;
+	background: #FFFFFF;
+	border: solid 1px #b5b5b5;
+	cursor: pointer;
+	margin-right: 8px;
+}
+.cart_button
+{
+	margin-top: 55px;
+}
+

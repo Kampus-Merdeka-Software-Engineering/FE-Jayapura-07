@@ -1,0 +1,92 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.buttons-container>a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+.buttons-container>a:hover{
+    background-color: #847474;
+    color: white;
+    transition: 0.5s;
+}
+body {
+    background-image: url('assets/background_images.png'); /* Ganti dengan path gambar Anda */
+    background-size: 100vw; /* Menyesuaikan ukuran gambar untuk mencakup seluruh area latar belakang */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-attachment: fixed; /* Membuat latar belakang tetap saat menggulir halaman */
+    height: 100%;
+}
+
+.image-logo{
+    width: auto;
+    height: 40px;
+    margin: 5px;
+    padding: 0px;
+    color: white;
+}
+
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.content {
+    padding: 200px;
+    color: white;
+}
+
+.content h1 {
+    font-size: 2.9em;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.show-button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ffffff; /* Choose your desired color */
+    color: #000000; /* Choose your desired color */
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.buttons-container>a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+.buttons-container>a:hover{
+    background-color: #847474;
+    color: white;
+    transition: 0.5s;
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .show-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,66 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.background {
+    background-image: url('path_to_your_background_image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content h1 {
+    font-size: 2.9em;
+}
+
+.content p {
+    font-size: 1.9em;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    margin-top: 20px;
+}
+
+.show-button {
+    padding: 15px 30px;
+    border: none;
+    background-color: #ffffff; /* Choose your desired color */
+    color: #000000; /* Choose your desired color */
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content p {
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    .show-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}

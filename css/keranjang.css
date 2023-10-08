@@ -1,0 +1,169 @@
+
+.all-produk{
+    display: grid;
+    place-items: center;
+}
+
+.detail-produk{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90vw;
+    border-bottom: 1px solid rgb(92, 92, 92);
+    padding-bottom: 20px;
+    background-color:#DBC0C0 ;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.detail-produk-head{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.detail-produk-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 100vw;
+}
+.detail-produk-inner{
+    display: flex;
+    flex-direction: column !important;
+    align-items: start;
+    justify-content: center;
+    gap: 20px;
+}
+.detail-produk-component{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 30px;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.quantity_control{
+    text-align: center;
+	display: block;
+	cursor: pointer;
+	background-color: whitesmoke;
+	padding: 5px 12px;
+	border-radius: 5px;
+    border: 1px solid gray;
+}
+.bold{
+    font-weight: 700;
+}
+.name-product{
+    width: 100%;
+    text-align: left;
+    vertical-align: top;
+}
+
+.product-name{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.img-product{
+    width: 150px;
+    height: auto;
+    vertical-align: auto;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+td, th{
+    text-align: center;
+}
+
+.btn-box{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.close-box{
+    width: 7%;
+    vertical-align: top;
+}
+
+.subtotal{
+    width: 10%;
+    vertical-align: bottom;
+}
+
+.btn-jumlah{
+    width: 30px;
+}
+
+.pilihan{
+    vertical-align: top;
+}
+.pilihan select, .pilihan input{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.size{
+    height: 5px;
+}
+.buang{
+    color: white;
+    background-color: rgb(192, 16, 16);
+    padding: 5px;
+    border-radius: 3px;
+}
+.buang:hover{
+    background-color: white;
+    color: rgb(192, 16, 16);
+}
+
+.tabel-tinggi-kolom{
+    width: 100%;
+}
+
+.garis-pembatas{
+    width: 73%;
+}
+
+.btn-buy{
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 30px;
+    background-color: #a5a3a3;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.btn-buynow{
+    padding: 10px 20px;
+}
+
+#tombolCheckout{
+    padding: 10px 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+    .detail-produk-body{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 10px;
+    }
+}

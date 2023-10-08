@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <title>Website Utama</title>
+    <link rel="icon" type="image/x-icon" href="assets\brand.png" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Vetemens shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap4/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="css/halamanawal.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<body>
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container px-4 px-lg-5">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="halamanawal.html" title="logo_brand"><img class="image-logo" src="assets\brand.png" alt=""></a></li>
+            </ul></b>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="store.html">All Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a></li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+            <form class="d-flex">
+                <a href="keranjang.html" class="btn btn-outline-dark">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                </a>
+            </form>                    
+        </div>
+    </div>
+</nav>
+  <div id="navbar-container"></div>
+  <script>
+      fetch('partials/navbar.html').then(response => response.text()).then(data => {document.getElementById('navbar-container').innerHTML = data});
+  </script>
+  
+    <div class="background">
+        <div class="content">
+            <h1>Quality, Style, Vetemens</h1>
+            <p>A standout Online Clothing Store</p>
+            <div class="buttons-container">
+                <a href="index.html" class="show-button">Show Now</a>
+            </div>            
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
+<style>
+    .buttons-container>a{
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    .buttons-container>a:hover{
+        background-color: #847474;
+        color: white;
+        transition: 0.5s;
+    }
+	body {
+		background-image: url('assets/background_images.png'); /* Ganti dengan path gambar Anda */
+		background-size: 100vw; /* Menyesuaikan ukuran gambar untuk mencakup seluruh area latar belakang */
+		background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+		background-attachment: fixed; /* Membuat latar belakang tetap saat menggulir halaman */
+        height: 100%;
+	}
+</style>

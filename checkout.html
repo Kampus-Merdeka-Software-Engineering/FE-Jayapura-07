@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Out</title>
+
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    
+    <link rel="icon" type="image/x-icon" href="assets\brand.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/checkout.css" rel="stylesheet" />
+</head>
+<body>
+    <script>
+        const lanjutkanPesanan = ()=>{
+            // console.log('adfakdjakjn');
+            document.querySelector('.checkout-detail').style.display = 'none';
+            document.querySelector('.formPembelian').style.display = 'block';
+        }
+    </script>
+    <header>
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="halamanawal.html" title="logo_brand"><img class="image-logo" src="assets\brand.png" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="store.html">All Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Contact Us</a></li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+                
+                <a href="keranjang.html" class="btn btn-outline-dark">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">3</span>
+                </a>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="checkout-detail">
+            <div id="output_card"></div>
+            <div class="billing-list card">
+                <div class="bill-head">Ringkasan Belanja</div>
+                <div class="billing-detail">
+                    <div>
+                        Total Harga (<span class="totalBarang"></span> barang) <br>
+                        Total Ongkos Kirim <br>
+                        <span>Total Belanja:</span>
+                    </div>&emsp;
+                    <div>
+                        Rp. <span class="totalHarga"></span> <br>
+                        Rp. 0 <br>
+                        Rp. <span class="totalBelanja"></span>
+                    </div>
+                </div>
+                <div class="flex-row align-items-center gap-2">
+                    <form action="" method="POST">
+                        <label for="pengiriman" class="fw-bold">Pengiriman:</label>
+                        <select title="pengiriman" name="pilih_pengiriman" id="pilih_pengiriman" required>
+                            <option value="" class="dropdown-toggle">Pilih Pengiriman</option>
+                            <option value="Same Day" id="opsiPengiriman">Same Day&emsp;(Rp. 0)</option>
+                            <option value="Reguler" id="opsiPengiriman">Reguler&emsp;(Rp. 0)</option>
+                            <option value="Kargo" id="opsiPengiriman">Kargo&emsp;(Rp. 0)</option>
+                        </select>
+                    </form>
+                    <button type="submit" class="bayar mt-2" id="bayar" onclick="lanjutkanPesanan()">lanjutkan Pesanan</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="formPembelian card">
+                <label for="namaPembeli">Nama</label>
+                <input type="text" name="namaPembeli" title="namaPembeli" id="" class="inputField" placeholder="Nama ...">
+                <label for="emailPembeli">Email</label>
+                <input type="email" name="emailPembeli" title="emailPembeli" id="" class="inputField" placeholder="abc12345@gmail.com">
+                <label for="noPembeli">No. Telpon</label>
+                <input type="number" name="noPembeli" title="noPembeli" id="" class="inputField" placeholder="+628123...">
+                <label for="alamatPembeli">Alamat</label>
+                <textarea name="alamatPembeli" title="alamatPembeli" id="" cols="30" rows="5" class="inputField" placeholder="Jl. ...."></textarea>
+                <select name="pilihPembayaran" title="pilihPembayaran" id="pilihPembayaran" class="mt-2" name="pembayaran">
+                    <!-- <option value="" class="dropdown-toggle">Pilih Pembayaran</option> -->
+                    <option value="COD" selected>COD</option>
+                    <option value="Transfer Bank">Transfer Bank</option>
+                    <option value="E-Wallet">E-Wallet</option>
+                    <option value="Kredit">Kredit</option>
+                </select>
+                <button type="submit" class="bayar mt-2" onclick="checkout()">Selesaikan Pesanan</button>
+        </section>
+    </main>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
