@@ -30,7 +30,7 @@ $.ajax({
       $("input[name=product_id]").val(response.data.id)
       $("#product-image").attr("src", response.data.image)
       $("#product-name").text(response.data.name)
-      $("#product-price").html(`$${response.data.price}`)
+      $("#product-price").html(`Rp.${response.data.price}`)
       for(let i = 0; i < response.data.ProductColors.length; i++)
       {
           const option = document.createElement("option")

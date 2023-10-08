@@ -34,7 +34,7 @@ $(document).ready(function()
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $${response.data[i].price}.00
+                                    Rp.${response.data[i].price}.00
                                 </div>
                             </div>
                             <!-- Product actions-->
