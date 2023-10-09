@@ -3,7 +3,7 @@ $(".cart-ammount").text(cart.length)
 $(document).ready(function()
 {
     $.ajax({
-        url: "http://localhost:3000/api/products",
+        url: "mysql://root:5aKhYyaXOQcI94e3x7tE@containers-us-west-135.railway.app:6312/railway",
         method: "GET",
         dataType: "json",
         beforeSend: function()
