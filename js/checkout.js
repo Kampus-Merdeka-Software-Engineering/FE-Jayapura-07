@@ -29,7 +29,7 @@ const cart = JSON.parse(localStorage.getItem("cart")) || []
 
             // Post data to API Transaction
             $.ajax({
-                url: "mysql://root:5aKhYyaXOQcI94e3x7tE@containers-us-west-135.railway.app:6312/railway/api/transaction",
+                url: "http://containers-us-west-135.railway.app/railway/api/transaction",
                 method: "POST",
                 data: JSON.stringify(transaction),
                 contentType: "application/json",
