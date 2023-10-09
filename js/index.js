@@ -3,7 +3,7 @@ $(".cart-ammount").text(cart.length)
 $(document).ready(function()
 {
     $.ajax({
-        url: "http://containers-us-west-135.railway.app/railway/api/products",
+        url: "https://be-jayapura-07-production.up.railway.app/api/products",
         method: "GET",
         dataType: "json",
         beforeSend: function()
