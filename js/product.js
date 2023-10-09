@@ -13,7 +13,7 @@ const cart = JSON.parse(localStorage.getItem("cart")) || []
 $(".cart-ammount").text(cart.length)
 // Get Product By Slug
 $.ajax({
-  url: 'https://railway.app/project/cfcca893-957b-4f1c-8071-c4b77b383e09/plugin/744c879b-aeb6-4f8d-8f8c-1a3f945cd784/data?state=table&table=products' + urlParams.get("slug"),
+  url: 'mysql://root:5aKhYyaXOQcI94e3x7tE@containers-us-west-135.railway.app:6312/railway' + urlParams.get("slug"),
   method: "GET",
   dataType: "json",
   beforeSend: function()
