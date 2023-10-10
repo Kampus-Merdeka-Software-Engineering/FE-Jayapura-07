@@ -13,7 +13,7 @@ const cart = JSON.parse(localStorage.getItem("cart")) || []
 $(".cart-ammount").text(cart.length)
 // Get Product By Slug
 $.ajax({
-  url: 'https://be-jayapura-07-production.up.railway.app/api/products' + urlParams.get("slug"),
+  url: 'https://be-jayapura-07-production.up.railway.app/api/products/' + urlParams.get("slug"),
   method: "GET",
   dataType: "json",
   beforeSend: function()
@@ -61,8 +61,8 @@ function addToCart(item) {
       product_id: parseInt($("input[name=product_id]").val()),
       name: $("#product-name").text(),
       slug: urlParams.get("slug"),
-      price_real: parseInt($("#product-price").text().replace("$", "")),
-      price: parseInt($("#product-price").text().replace("$", "")) * parseInt($("input[name=qty]").val()),
+      price_real: parseInt($("#product-price").text().replace("Rp.", "")),
+      price: parseInt($("#product-price").text().replace("Rp.", "")) * parseInt($("input[name=qty]").val()),
       size: $("input[name=product_radio]:checked").val(),
       color_selected: $("select[name=color] option").filter(":selected").val(),
       color_option:  productColors,
