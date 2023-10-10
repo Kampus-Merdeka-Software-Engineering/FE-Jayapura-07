@@ -77,7 +77,7 @@ const cart = JSON.parse(localStorage.getItem("cart")) || []
                             <div class="harga"><span>Harga:</span> Rp. ${checkout_tmp[i].price_real}</div>
                             <div class="subtotal">
                                 <span>Subtotal:</span>
-                                Rp. ${checkout_tmp[i].price}
+                                Rp.${checkout_tmp[i].price}
                             </div>
                         </div>
                     </div>
